@@ -8,3 +8,4 @@ huggingface/
 models/
 .venv/
 venv/
+tests/__pycache__/

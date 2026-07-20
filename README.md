@@ -128,3 +128,28 @@ Dans le terminal exécutant Streamlit :
 ```
 Ctrl + C
 ```
+
+---
+
+## Tests
+
+Le projet contient des tests d'intégration de l'API réalisés avec **pytest** et **FastAPI TestClient**.
+
+### Exécuter les tests
+
+Depuis la racine du projet :
+
+```bash
+python -m pytest -v
+```
+
+### Tests disponibles
+
+Les tests vérifient notamment :
+
+* le bon fonctionnement de l'endpoint `POST /diagnose` ;
+* la validation des données d'entrée (champ `technician_note` obligatoire) ;
+* la structure de la réponse retournée par l'API.
+
+Afin de garantir des tests rapides et déterministes, le modèle d'IA est simulé (mocké) pendant l'exécution des tests. Aucun téléchargement ni aucune génération réelle ne sont effectués.
+
